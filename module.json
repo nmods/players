@@ -1,0 +1,7 @@
+{
+    "disableAutoUpdate": false,
+    "name": "players",
+    "author": "NMods",
+    "description": "Spawned players tool",
+    "servers": ["https://raw.githubusercontent.com/nmods/players/master/"]
+}
