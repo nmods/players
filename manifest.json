@@ -1,6 +1,6 @@
 {
 	"files": {
-		"index.js": "43956963e23f238df955b4bb294c73b6afa035e44916aa8bd5d824ec0857dcf9",
+		"index.js": "a9cbeffe3d5dbfb5a564fda237707f38e2cf25ee97b9287634081b36f8a8897d",
 		"module.json": "1281503052a8864717ff1699df15d83d08f33a263b476c4241d5e489a844aa80",
 		"userData.json": "f21d02542b3a4267a57ee2ec7fdde4715463d848b305b3b1b0097467674c69dc"
 	},
@@ -10,7 +10,7 @@
 		"S_DESPAWN_USER": 3,
 		"S_SOCIAL": 1,
 		"S_SPAWN_ME": 3,
-		"S_SPAWN_USER": 13,
+		"S_SPAWN_USER": 15,
 		"S_USER_LOCATION": 5
 	}
 }

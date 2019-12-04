@@ -18,7 +18,8 @@ module.exports = function PlayerList(mod) {
 		searchId = null,
 
 		emoteMimicName,
-		emoteMimicId
+		emoteMimicId,
+		emoteMimicDelay = 500
 
 
 	command.add('p', (...args) => {
@@ -137,6 +138,10 @@ module.exports = function PlayerList(mod) {
 				break
 			case 'emote':
 			case 'e':
+				if (!isNaN(arg2)) {
+					command.message('Emote mimic delay set to ' + arg2)
+					return
+				}
 				if (emoteMimicName) {
 					command.message('Stopped emote mimicking ' + emoteMimicName)
 					emoteMimicName = null
@@ -156,6 +161,9 @@ module.exports = function PlayerList(mod) {
 				} else {
 					command.message('Player name missing or invalid: ' + arg2)
 				}
+				break
+			case 'h':
+				console.log(JSON.stringify(history, null, '\t'))
 				break
 		}
 
@@ -196,7 +204,7 @@ module.exports = function PlayerList(mod) {
 
 	mod.hook('S_SPAWN_ME', 3, updateLocation)
 
-	mod.hook('S_SPAWN_USER', 13, (event) => {
+	mod.hook('S_SPAWN_USER', 15, (event) => {
 		if (event.guild == '') event.guild = '(Guildless)'
 		players[event.gameId] = event
 
